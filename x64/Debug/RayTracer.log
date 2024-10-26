@@ -1,2 +1,4 @@
-﻿RayTracer.obj : error LNK2005: "void __cdecl write_color(class std::basic_ostream<char,struct std::char_traits<char> > &,class vec3 const &)" (?write_color@@YAXAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEBVvec3@@@Z) already defined in color.obj
-C:\Users\kutsc\OneDrive\Desktop\Fall24\Coms 336 - Graphics\vsCode-raytracer\RayTracer\x64\Debug\RayTracer.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  RayTracer.cpp
+  color.cpp
+  Generating Code...
+  RayTracer.vcxproj -> C:\Users\kutsc\OneDrive\Desktop\Fall24\Coms 336 - Graphics\vsCode-raytracer\RayTracer\x64\Debug\RayTracer.exe
