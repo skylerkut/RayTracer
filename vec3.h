@@ -1,8 +1,6 @@
 #ifndef VEC3_H
 #define VEC3_H
 
-#include <cmath>
-#include <iostream>
 class vec3 {
 public:
 	double e[3];
@@ -13,9 +11,6 @@ public:
 	double x() const { return e[0]; }
 	double y() const { return e[1]; }
 	double z() const { return e[2]; }
-
-	double length_squared() const { return e[0] * e[0] + e[1] * e[1] + e[2] * e[2]; }
-	double length() const { return std::sqrt(length_squared()); }
 
 	vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
 	double operator[] (int i) const { return e[i]; }
@@ -38,6 +33,9 @@ public:
 	vec3& operator /= (double t) {
 		return *this *= 1 / t;
 	}
+
+	double length_squared() const { return e[0] * e[0] + e[1] * e[1] + e[2] * e[2]; }
+	double length() const { return std::sqrt(length_squared()); }
 
 	// Friend function declaration for operator+
 	friend vec3 operator+ (const vec3& u, const vec3& v);
