@@ -48,6 +48,12 @@ public:
 	// Friend function declaration for operator+
 	friend vec3 operator+ (const vec3& u, const vec3& v);
 
+	bool near_zero() const {
+		// Return true if the vector is close to zero in all dimensions.
+		auto s = 1e-8;
+		return (std::fabs(e[0]) < s) && (std::fabs(e[1]) < s) && (std::fabs(e[2]) < s);
+	}
+
 };//end vec3 class
 
 //Vec3 Alias
@@ -114,6 +120,11 @@ public:
 		  else
 			  return -on_unit_sphere;
 	  }
+
+	  inline vec3 reflect(const vec3& v, const vec3& n) {
+		  return v - 2 * dot(v, n) * n;
+	  }
+
 
 #endif
 
